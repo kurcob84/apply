@@ -13,7 +13,7 @@ export class UserService
 
     public isLoggedIn(): Observable<boolean>
     {
-        return this.http.get(environment.apiEndpoint + '/isLoggedIn').map((data) => this.extractData(data))
+        return this.http.get(environment.apiEndpoint + '/auth/applicant/login').map((data) => this.extractData(data))
     }
 
     private extractData(res: Response)
